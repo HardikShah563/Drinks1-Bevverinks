@@ -1,0 +1,582 @@
+/* variable css */
+:root {
+    /* --background-color: #ffffff; */
+    --black-blue: #1B262C;
+    --navy-blue: #0F4C75;
+    --blue: #3282B8;
+    --light-blue: #BBE1FA;
+    --golden: #bc9864;
+    --off-black: #060606;
+    --grey: #666666;
+    --dark-grey: #141414;
+    --off-white: #cecece;
+    --sonic-silver: hsl(0, 0%, 44%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+/* Font face import */
+@font-face {
+    font-family: Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+/* Reset all web parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+input,
+button,
+.icon {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+/* ---- navigation bar logo ---- */
+.logo label {
+    color: var(--golden);
+}
+
+.logo label {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* ---- navigation bar links ---- */
+.nav-links {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    width: 30%;
+    margin: 0 20px;
+}
+
+.nav-links li {
+    display: block;
+    margin: auto 10px;
+}
+
+.nav-links li a{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+    transition: 500ms;
+}
+
+.nav-links li a:hover {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+/* ---- navigation bar buttons ---- */
+.nav-actions {
+    display: flex;
+    justify-content: space-evenly;
+    width: 10%;
+    transition: 500ms;
+}
+
+.nav-actions button {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+.nav-btn {
+    position: relative;
+    width: 50px;
+    text-align: center;
+}
+
+.nav-actions button p a {
+    color: var(--grey);
+    transition: 500ms;
+}
+
+.nav-btn:hover > .nav-action-label a {
+    color: var(--white);
+}
+
+.nav-btn .icon {
+    margin-inline: auto;
+    font-size: 22px;
+    margin-bottom: 3px;
+    color: var(--black);
+    -webkit-text-stroke: var(--white);
+    -webkit-text-stroke-width: 1px;
+    transition: 200ms;
+}
+
+.nav-btn:hover > .icon {
+    -webkit-text-stroke: var(--golden);
+    -webkit-text-stroke-width: 1px;
+}
+
+.nav-btn .btn-badge {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background: var(--background, var(--off-black));
+    background: var(--black);
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    line-height: 0;
+    font-size: 13px;
+    color: var(--white);
+    border: 0.5px solid var(--white);
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+.nav-btn:hover > .btn-badge {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* navigation bar lines for collapsable nav bar */
+.nav-lines {
+    display: none;
+    margin: auto 0;
+}
+
+.line-full {
+    background-color: var(--black);
+    width: 20px;
+    height: 2px;
+    margin: 5px;
+}
+
+.line-half {
+    background-color: var(--black);
+    width: 10px;
+    height: 2px;
+    margin: 5px;
+}
+
+#home {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    background: url("../img/background-drinks.png");
+    background-size: cover;
+    background-position: right;
+}
+
+/* ---- Main Cover Page ---- */
+
+main {
+    margin: 10%;
+    color: var(--white);
+    text-shadow: 0px 0px 100px var(--blue);
+}
+
+main h2 {
+    font-size: 30px;
+    text-shadow: 0px 0px 100px var(--blue);
+}
+
+main h1 {
+    font-size: 96px;
+    color: var(--black);
+    -webkit-text-stroke-color: var(--white);
+    -webkit-text-stroke-width: 0.5px;
+    text-shadow: 0px 0px 100px var(--blue);
+}
+
+main p {
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 100px var(--blue);
+}
+
+.explore-menu {
+    margin: 40px 0;
+    padding: 10px 20px;
+    background-color: var(--off-black);
+    border: 1px solid var(--light-blue);
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px var(--light-blue);
+    transition: 500ms ease;
+}
+
+.explore-menu:hover {
+    box-shadow: 0px 0px 100px var(--blue);
+}
+
+.explore-menu a {
+    color: var(--white);
+}
+
+/* ---- About Us Section ---- */
+#about-us {
+    background-color: var(--off-white);
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.about-us h1 {
+    font-size: 72px;
+    color: var(--golden);
+    margin: 40px 0;
+}
+
+.about-us p {
+    font-size: 1.5vw;
+    width: 80%;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+
+.about-us-img img {
+    width: 30vw;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 100px var(--off-black);
+}
+
+/* ---- Shop Section */ 
+
+.shop {
+    background: url('../img/shop-background.png');
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop a {
+    padding: 10px 20px;
+    border: 2px solid var(--off-black);
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--off-white);
+    background-color: var(--off-black);
+    transition: 400ms;
+}
+
+.shop a:hover {
+    background-color: transparent;
+    color: var(--off-black);
+}
+
+/* ---- Contact Section ---- */
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--off-black);
+    color: var(--white);
+    padding: 5%;
+}
+
+.contact-form {
+    width: 40vw;
+}
+
+.contact-form h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 20px 0px 40px 0px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 95%;
+    height: 40px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.contact-form textarea {
+    resize: none;
+    margin: 0 20px;
+    height: auto;
+}
+
+.contact-form button {
+    background-color: var(--golden);
+    border: 1px solid var(--golden);
+    padding: 0px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.contact-form button:hover {
+    background-color: var(--off-black);
+    color: var(--golden);
+}
+
+.contact-info {
+    text-align: center;
+    /* margin: 0 20vw; */
+}
+
+.contact-info-box {
+    font-weight: 300;
+    margin: 40px;
+}
+
+.contact-info-box {
+    margin: 40px;
+}
+
+.contact-info-box i {
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: var(--golden);
+}
+
+.contact-info-box a , .contact-info-box p{
+    color: var(--grey);
+}
+
+/* ---- Footer CSS ---- */
+footer {
+    padding: 20px;
+    padding-bottom: 10vw;
+    height: 20vh;
+    background-color: var(--off-black);
+}
+
+footer p {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#heart {
+    color: #ff0000;
+    margin: 0 5px;
+}
+
+@media (max-width: 1000px) {
+    header {
+        background-color: var(--white);
+    }
+
+    .logo label {
+        color: var(--black);
+        font-weight: 700;
+    }
+
+    .nav-actions {
+        background-color: var(--white);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        padding-block: 16px 10px;
+        box-shadow: 0 -2px 20px hsla(0, 0%, 0%, 0.1);
+        z-index: 1;
+    }
+
+    .nav-lines {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        margin: 0 0;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background-color: #000000e2;
+        transform: 200ms;
+        overflow: hidden;
+        transition: 200ms;
+        /* opacity: 0%; */
+    }
+
+    .nav-links.active {
+        height: 40%;
+    }
+
+    .nav-links li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-btn .icon {
+        margin-inline: auto;
+        font-size: 22px;
+        margin-bottom: 3px;
+        color: #ffffff;
+        -webkit-text-stroke: var(--black);
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .nav-btn:hover > .nav-action-label {
+        color: var(--black);
+    }
+
+    .nav-btn:hover > .btn-badge {
+        background-color: var(--black);
+        color: var(--golden);
+    }
+
+    main h2 {
+        font-size: 5vw;
+    }
+
+    main h1 {
+        display: block;
+        bottom: 30%;
+        font-size: 15vw;
+    }
+
+    main p {
+        font-size: 2vw;
+    }
+
+    #about-us {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .about-us h1 {
+        text-align: center;
+    }
+
+    .about-us p { 
+        display: block;
+        margin: auto auto;
+        width: 100%;
+        font-size: 2vw;
+        line-height: 30px;
+    }
+
+    .about-us-img img {
+        width: 70vw;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo label {
+        font-size: 20px;
+    }
+
+    #home {
+        height: 100vh;
+        width: 100%;
+        background-color: var(--black);
+        background: url("../img/background-drinks.png");
+        background-size: cover;
+        background-position:500px;
+    }
+    
+    main p {
+        font-size: 4vw;
+    }
+
+    .about-us h1 {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20vw;
+    }
+
+    .about-us p { 
+        font-size: 16px;
+        width: 95%;
+        display: block;
+        margin: auto auto;
+    }
+
+    .about-us-img img {
+        width: 90vw;
+    }
+
+    .contact-form {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+
+    .contact-form input, .contact-form textarea, .contact-form button {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .contact-form h1 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 4vw;
+    }
+
+    footer p i {
+        color: #ff0000;
+        margin: 5px;
+    }
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--off-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 10px;
+}
