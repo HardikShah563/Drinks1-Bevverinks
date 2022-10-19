@@ -1,0 +1,183 @@
+/* variable css */
+:root {
+    /* --background-color: #ffffff; */
+    --black-blue: #1B262C;
+    --navy-blue: #0F4C75;
+    --blue: #3282B8;
+    --light-blue: #BBE1FA;
+    --golden: #bc9864;
+    --off-black: #060606;
+    --grey: #666666;
+    --dark-grey: #141414;
+    --off-white: #cecece;
+    --sonic-silver: hsl(0, 0%, 44%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+/* Font face import */
+@font-face {
+    font-family: Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+/* Reset all web parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: var(--white);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+input,
+button,
+.icon {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    transform: 400ms;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    background: url(./../img/login-drinks.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.register {
+    display: block;
+    margin: auto auto;
+    position: absolute;
+    top: 10%;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    background-color: #000000bb;
+}
+
+.register-form {
+    -webkit-transform: translateY(25%);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%);
+}
+
+
+.register-form h1,
+input,
+.submit {
+    display: block;
+    margin: 20px auto 20px auto;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 35%;
+    font-size: 20px;
+    color: var(--off-white);
+}
+
+.register-form h1 {
+    text-align: center;
+    font-size: 48px;
+    color: var(--white);
+}
+
+.register-form input {
+    background-color: var(--dark-grey);
+    border: 1px solid var(--white);
+}
+
+::placeholder {
+    color: var(--grey);
+    font-size: 16px;
+}
+
+.submit {
+    text-align: center;
+    background-color: var(--golden);
+    border: 1px solid var(--golden);
+    color: var(--black);
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.register-form input+a:hover {
+    background-color: var(--dark-grey);
+    color: var(--off-white);
+}
+
+.register-form p {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+
+    .register-form h1,
+    input,
+    .submit {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .register {
+        opacity: 0.8;
+        border: none;
+    }
+
+    .register-form h1,
+    input,
+    .submit {
+        width: 90%;
+        text-align: center;
+    }
+
+    .register-form h1 {
+        font-size: 36px;
+    }
+
+    .register-form input {
+        font-size: 16px;
+    }
+
+    ::placeholder {
+        color: var(--grey);
+        font-size: 14px;
+    }
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--off-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 10px;
+}
