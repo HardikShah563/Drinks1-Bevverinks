@@ -1,0 +1,455 @@
+/* variable css */
+:root {
+    /* --background-color: #ffffff; */
+    --black-blue: #1B262C;
+    --navy-blue: #0F4C75;
+    --blue: #3282B8;
+    --light-blue: #BBE1FA;
+    --golden: #bc9864;
+    --off-black: #060606;
+    --grey: #666666;
+    --dark-grey: #141414;
+    --off-white: #cecece;
+    --sonic-silver: hsl(0, 0%, 44%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --light-black: #303030;
+}
+
+/* Font face import */
+@font-face {
+    font-family: Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
+/* Reset all web parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+input,
+button,
+.icon {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+/* ---- navigation bar logo ---- */
+.logo label {
+    color: var(--golden);
+}
+
+.logo label {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* ---- navigation bar links ---- */
+.nav-links {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    width: 30%;
+    margin: 0 20px;
+}
+
+.nav-links li {
+    display: block;
+    margin: auto 10px;
+}
+
+.nav-links li a {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+    transition: 500ms;
+}
+
+.nav-links li a:hover {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+/* ---- navigation bar buttons ---- */
+.nav-actions {
+    display: flex;
+    justify-content: space-evenly;
+    width: 10%;
+    transition: 500ms;
+}
+
+.nav-actions button {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+.nav-btn {
+    position: relative;
+    width: 50px;
+    text-align: center;
+}
+
+.nav-actions button p a {
+    color: var(--grey);
+    transition: 500ms;
+}
+
+.nav-btn:hover>.nav-action-label a {
+    color: var(--white);
+}
+
+.nav-btn .icon {
+    margin-inline: auto;
+    font-size: 22px;
+    margin-bottom: 3px;
+    color: var(--black);
+    -webkit-text-stroke: var(--white);
+    -webkit-text-stroke-width: 1px;
+    transition: 200ms;
+}
+
+.nav-btn:hover>.icon {
+    -webkit-text-stroke: var(--golden);
+    -webkit-text-stroke-width: 1px;
+}
+
+.nav-btn .btn-badge {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background: var(--background, var(--off-black));
+    background: var(--black);
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    line-height: 0;
+    font-size: 13px;
+    color: var(--white);
+    border: 0.5px solid var(--white);
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+.nav-btn:hover>.btn-badge {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* navigation bar lines for collapsable nav bar */
+.nav-lines {
+    display: none;
+    margin: auto 0;
+}
+
+.line-full {
+    background-color: var(--white);
+    width: 20px;
+    height: 2px;
+    margin: 5px;
+}
+
+.line-half {
+    background-color: var(--white);
+    width: 10px;
+    height: 2px;
+    margin: 5px;
+}
+
+.navbar {
+    background-color: var(--black);
+}
+
+
+/* -------------------------- */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto auto;
+    width: 80vw;
+}
+
+.menu-card {
+    padding: 10px 15px;
+    margin: 20px;
+    background-color: var(--off-black);
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px var(--dark-grey);
+    transition: 400ms;
+}
+
+.menu-card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 40px var(--dark-grey);
+}
+
+.menu-card img {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: auto;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+}
+
+.drink-details {
+    display: flex;
+    color: var(--off-white);
+}
+
+.drink-name, .drink-cost {
+    margin: 10px;
+}
+
+.menu-card button {
+    width: 90%;
+    height: 45px;
+    margin: auto auto;
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.menu-card button:hover {
+    transform: scale(1.1);
+}
+
+.menu-card button i {
+    color: var(--golden);
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.popup {
+    display: flex;
+    position:fixed;
+    justify-content: center;
+    width: 20vw;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1vw;
+    background-color: var(--off-black);
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    border-radius: 8px;
+    z-index: 1;
+    bottom: 40px;
+    left: 40%;
+    margin: auto auto;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup i {
+    margin: 0 10px 0 0;
+    font-size: 24px;
+    margin-top: 5px;
+    color: #2cbb5d;
+}
+
+.cart-title {
+    display: flex;
+    justify-content: center;
+    margin: 3% 3%;
+}
+
+.line {
+    display: block;
+    margin: auto auto;
+    width: 30vw;
+    height: 1px;
+    background-color: var(--black);
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* -------------------------- */
+
+/* Checkout Section CSS */
+.checkout {
+    display: block;
+    margin: 2% auto;
+    width: 20vw;
+    height: 50px;
+    font-size: 18px;
+    background-color: var(--off-black);
+    color: var(--golden);
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.checkout:hover {
+    background-color: var(--golden);
+    color: var(--black);
+}
+
+.checkout a {
+    color: var(--golden);
+    height: 100%;
+    padding-top: 10px;
+}
+
+.checkout a:hover {
+    color: var(--black);
+}
+
+/* ---- Footer CSS ---- */
+footer {
+    padding: 5%;
+    padding-bottom: 10%;
+    width: 100vw;
+    height: 20vh;
+    background-color: var(--off-black);
+}
+
+footer p {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#heart {
+    color: #ff0000;
+    margin: 0 5px;
+}
+
+/* CSS for screen width less than 1000px */
+@media (max-width: 1000px) {
+    header {
+        background-color: var(--black);
+    }
+
+    .logo label {
+        color: var(--golden);
+        font-weight: 700;
+    }
+
+    .nav-actions {
+        background-color: var(--black);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        padding-block: 16px 10px;
+        box-shadow: 0 -2px 20px hsla(0, 0%, 0%, 0.1);
+        z-index: 1;
+    }
+
+    .nav-lines {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        margin: 0 0;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background-color: #000000e2;
+        transform: 200ms;
+        overflow: hidden;
+        transition: 200ms;
+        /* opacity: 0%; */
+    }
+
+    .nav-links.active {
+        height: 40%;
+    }
+
+    .nav-links li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-btn .icon {
+        margin-inline: auto;
+        font-size: 22px;
+        margin-bottom: 3px;
+        color: var(--black);
+        -webkit-text-stroke: var(--white);
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .nav-btn:hover>.nav-action-label {
+        color: var(--white);
+    }
+
+    .nav-btn:hover>.btn-badge {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    .checkout {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo label {
+        font-size: 20px;
+    }
+
+    .checkout {
+        width: 50vw;
+    }
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--off-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 10px;
+}
