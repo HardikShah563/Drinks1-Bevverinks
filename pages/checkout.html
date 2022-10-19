@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverrinks Cart</title>
+    <!-- ----Style sheets ---- -->
+    <link rel="stylesheet" href="../style/checkout.css">
+    <!-- ---- Icons ---- -->
+    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="navbar" id="navbar">
+        <header>
+            <div class="logo">
+                <a href="../index.html"><label>beverrinks</label></a>
+            </div>
+            <div class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn">
+                    <a class="fa-solid fa-user icon" href="./pages/login.html" target="_blank"></a>
+                    <p class="nav-action-label"><a href="./pages/login.html" target="_blank">Sign In</a></p>
+                </button>
+                <button class="nav-btn">
+                    <a class="fa-solid fa-cart-shopping icon" href="./pages/cart.html" target="_blank"></a>
+                    <p class="nav-action-label"><a href="./pages/cart.html" target="_blank">Cart</a></p>
+                    <div class="btn-badge green" aria-hidden="true">3</div>
+                </button>
+            </div>
+            <div class="nav-lines">
+                <div class="line line-full"></div>
+                <div class="line line-half"></div>
+                <div class="line line-full"></div>
+            </div>
+        </header>
+    </section>
+
+    <section class="checkout" id="checkout" name="checkout">
+        <form>
+            <p>Personal Information: </p>
+            <div class="form personal-details">
+                <input type="text" placeholder="Name" required>
+                <input type="text" name="phoneNo" id="phoneNo" placeholder="Phone Number" required>
+                <input type="email" name="emailId" id="emailId" placeholder="Email Id" required>
+            </div>
+            <hr>
+            <p>Address: </p>
+            <div class="form address-details">
+                <input type="text" placeholder="House no. / Building Name" required>
+                <input type="text" placeholder="Road Name / Area / Colony" required>
+                <input type="text" placeholder="Pincode" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="Nearby Location (optional)" required>
+            </div>
+            <hr>
+            <p>Mode of Payment: </p>
+            <div class="form payment-details">
+                <input type="text" placeholder="Mode of Payment" required>
+            </div>
+            <div class="form">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- ---- Footer Section ---- -->
+    <section class="footer" id="foother">
+        <footer>
+            <p>Build with <i class="fa-solid fa-heart" id="heart"></i></p>
+            <p id="copyrights">&copy; Copyright beverrinks | All Rights Reserved</p>
+        </footer>
+    </section>
+
+    <script src="../script/checkout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverrinks Cart</title>
+    <!-- ----Style sheets ---- -->
+    <link rel="stylesheet" href="../style/cart.css">
+    <!-- ---- Icons ---- -->
+    <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="navbar" id="navbar">
+        <header>
+            <div class="logo">
+                <a href="../index.html"><label>beverrinks</label></a>
+            </div>
+            <div class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about-us">About</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li><a href="../index.html#contact-section">Contact</a></li>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn">
+                    <a class="fa-solid fa-user icon" href="./login.html" target="_blank"></a>
+                    <p class="nav-action-label"><a href="./login.html" target="_blank">Sign In</a></p>
+                </button>
+                <button class="nav-btn">
+                    <a class="fa-solid fa-cart-shopping icon" href="./cart.html" target="_blank"></a>
+                    <p class="nav-action-label"><a href="./cart.html" target="_blank">Cart</a></p>
+                    <div class="btn-badge green" aria-hidden="true">3</div>
+                </button>
+            </div>
+            <div class="nav-lines">
+                <div class="line line-full"></div>
+                <div class="line line-half"></div>
+                <div class="line line-full"></div>
+            </div>
+        </header>
+    </section>
+
+    <div class="popup hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        Successfully removed from cart
+    </div>
+    
+    <section class="soft-drinks-menu" id="soft-drinks-menu">
+
+        <div class="cart-title">
+            <div class="line"></div>
+            <div class="title">Cart</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-card">
+                <img src="../img/PiscoPunch.png" alt="drink image">
+                <div class="drink-details">
+                    <p class="drink-name" id="drink-name">Pisco Punch</p>
+                    <p class="drink-cost" id="drink-cost">€ 00.00</p>
+                </div>
+                <button class="add-to-cart">
+                    Remove from Cart
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="../img/CorpseReviver.png" alt="drink image">
+                <div class="drink-details">
+                    <p class="drink-name" id="drink-name">Corpse Reviver</p>
+                    <p class="drink-cost" id="drink-cost">€ 00.00</p>
+                </div>
+                <button class="add-to-cart">
+                    Remove from Cart
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="../img/IrishCoffee.png" alt="drink image">
+                <div class="drink-details">
+                    <p class="drink-name" id="drink-name">Irish Coffee</p>
+                    <p class="drink-cost" id="drink-cost">€ 00.00</p>
+                </div>
+                <button class="add-to-cart">
+                    Remove from Cart
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+            <div class="menu-card">
+                <img src="../img/HankyPanky.png" alt="drink image">
+                <div class="drink-details">
+                    <p class="drink-name" id="drink-name">Hanky Panky</p>
+                    <p class="drink-cost" id="drink-cost">€ 00.00</p>
+                </div>
+                <button class="add-to-cart">
+                    Remove from Cart
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="checkout-section">
+        <button class="checkout" id="checkout"><a href="./checkout.html">Checkout</a></button>
+    </div>
+
+    <!-- ---- Footer Section ---- -->
+    <section class="footer" id="foother">
+        <footer>
+            <p>Build with <i class="fa-solid fa-heart" id="heart"></i></p>
+            <p id="copyrights">&copy; Copyright beverrinks | All Rights Reserved</p>
+        </footer>
+    </section>
+    <script src="../script/cart.js"></script>
+</body>
+
+</html>
