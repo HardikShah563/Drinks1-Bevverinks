@@ -1172,7 +1172,7 @@ CART PAGE CSS
     height: 50px;
     font-size: 18px;
     background-color: var(--off-black);
-    color: var(--golden);
+    color: var(--white);
     border: 2px solid var(--black);
     border-radius: 8px;
     cursor: pointer;

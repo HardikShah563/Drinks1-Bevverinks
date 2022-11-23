@@ -1,6 +1,6 @@
 <?php
 
-$dbname = 'choirs';
+$dbname = 'beverrinks';
 $dbuser = 'root';
 $dbpass = '';
 $dbhost = 'localhost';
