@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beverrinks Cart</title>
     <!-- ----Style sheets ---- -->
-    <link rel="stylesheet" href="../style/checkout.css">
+    <link rel="stylesheet" href="../style/style.css">
     <!-- ---- Icons ---- -->
     <script src="https://kit.fontawesome.com/6d232ec003.js" crossorigin="anonymous"></script>
+    <title>Checkout | Beverrinks</title>
 </head>
 
 <body>
@@ -43,17 +43,17 @@
         </header>
     </section>
 
-    <section class="checkout" id="checkout" name="checkout">
+    <section class="checkout" name="checkout">
         <form>
             <p>Personal Information: </p>
-            <div class="form personal-details">
+            <div class="checkout-form personal-details">
                 <input type="text" placeholder="Name" required>
                 <input type="text" name="phoneNo" id="phoneNo" placeholder="Phone Number" required>
                 <input type="email" name="emailId" id="emailId" placeholder="Email Id" required>
             </div>
             <hr>
             <p>Address: </p>
-            <div class="form address-details">
+            <div class="checkout-form address-details">
                 <input type="text" placeholder="House no. / Building Name" required>
                 <input type="text" placeholder="Road Name / Area / Colony" required>
                 <input type="text" placeholder="Pincode" required>
@@ -63,10 +63,10 @@
             </div>
             <hr>
             <p>Mode of Payment: </p>
-            <div class="form payment-details">
+            <div class="checkout-form payment-details">
                 <input type="text" placeholder="Mode of Payment" required>
             </div>
-            <div class="form">
+            <div class="checkout-form">
                 <button type="submit">Submit</button>
             </div>
         </form>
