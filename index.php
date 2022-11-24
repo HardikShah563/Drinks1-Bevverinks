@@ -29,10 +29,17 @@
                 <li><a href="sql-pages/contact.php">Contact</a></li>
             </div>
             <div class="nav-actions">
-                <button class="nav-btn">
-                    <a class="fa-solid fa-user icon" href="sql-pages/login.php" ></a>
-                    <p class="nav-action-label"><a href="sql-pages/login.php">Sign In</a></p>
-                </button>
+                <?php if (isset($_SESSION['u_id'])) { ?>
+                    <button class="nav-btn">
+                        <a class="fa-solid fa-right-from-bracket icon" href="sql-pages/logout.php" ></a>
+                        <p class="nav-action-label"><a href="sql-pages/logout.php">LogOut</a></p>
+                    </button>
+                <?php } else { ?>
+                    <button class="nav-btn">
+                        <a class="fa-solid fa-user icon" href="sql-pages/login.php" ></a>
+                        <p class="nav-action-label"><a href="sql-pages/login.php">Sign In</a></p>
+                    </button>
+                <?php } ?>
                 <button class="nav-btn">
                     <a class="fa-solid fa-cart-shopping icon" href="sql-pages/cart.php"></a>
                     <p class="nav-action-label"><a href="sql-pages/cart.php">Cart</a></p>

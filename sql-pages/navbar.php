@@ -1,3 +1,5 @@
+<?php include 'functions.php' ?>
+
 <header>
     <div class="logo">
         <label>beverrinks</label>
@@ -9,10 +11,17 @@
         <li><a href="contact.php">Contact</a></li>
     </div>
     <div class="nav-actions">
-        <button class="nav-btn">
-            <a class="fa-solid fa-user icon" href="login.php" ></a>
-            <p class="nav-action-label"><a href="login.php">Sign In</a></p>
-        </button>
+        <?php if (isset($_SESSION['u_id'])) { ?>
+            <button class="nav-btn">
+                <a class="fa-solid fa-right-from-bracket icon" href="logout.php" ></a>
+                <p class="nav-action-label"><a href="logout.php">LogOut</a></p>
+            </button>
+        <?php } else { ?>
+            <button class="nav-btn">
+                <a class="fa-solid fa-user icon" href="login.php" ></a>
+                <p class="nav-action-label"><a href="login.php">Sign In</a></p>
+            </button>
+        <?php } ?>
         <button class="nav-btn">
             <a class="fa-solid fa-cart-shopping icon" href="cart.php"></a>
             <p class="nav-action-label"><a href="cart.php">Cart</a></p>
