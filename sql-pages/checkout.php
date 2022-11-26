@@ -19,6 +19,9 @@
         $cart = get_cart();
         if (!empty($cart)) {
             $checkout['u_id'] = $_SESSION["u_id"];
+            $checkout['fname'] = $_POST["fname"];
+            $checkout['lname'] = $_POST["lname"];
+            $checkout['email'] = $_POST["email"];
             $checkout["total"] = get_total();
             $checkout["drinks"] = json_encode($cart, true);
             $checkout = checkout($checkout);
@@ -30,19 +33,19 @@
             } else {
                 $response = [
                     'type' => 'success',
-                    'message' => 'Checkout Successful',
+                    'message' => 'Checkout Successful, go to shop to view more drinks',
                 ];
                 empty_cart();
             }
         } else {
-            header('Location: ./index.php');
+            header('Location: ../index.php');
         }
     }
 
     ?>
 
     <section class="checkout" name="checkout">
-        <form>
+        <form action="?" method="post">
             <?php if (isset($response)) { ?>
                 <div class="message-box <?= $response['type'] ?>">
                     <p><?= $response['message'] ?></p>
@@ -50,9 +53,10 @@
             <?php } ?>
             <p>Personal Information: </p>
             <div class="checkout-form personal-details">
-                <input type="text" placeholder="Name" required>
+                <input type="text" name="fname" placeholder="First Name" required>
+                <input type="text" name="lname" placeholder="Last Name" required>
                 <input type="text" name="phoneNo" id="phoneNo" placeholder="Phone Number" required>
-                <input type="email" name="emailId" id="emailId" placeholder="Email Id" required>
+                <input type="email" name="email" id="emailId" placeholder="Email Id" required>
             </div>
             <hr>
             <p>Address: </p>
@@ -64,13 +68,8 @@
                 <input type="text" placeholder="State" required>
                 <input type="text" placeholder="Nearby Location (optional)" required>
             </div>
-            <hr>
-            <p>Mode of Payment: </p>
-            <div class="checkout-form payment-details">
-                <input type="text" placeholder="Mode of Payment" required>
-            </div>
             <div class="checkout-form">
-                <button type="submit">Submit</button>
+                <button name="checkout" type="submit">Submit</button>
             </div>
         </form>
     </section>
