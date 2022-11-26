@@ -9,8 +9,45 @@
 <body>
     <?php include 'navbar.php' ?>
 
+    <?php
+
+    if (!isset($_SESSION['u_id'])) {
+        header('Location: ./login.php');
+    }
+    if (isset($_POST['checkout'])) {
+        $checkout = $_POST;
+        $cart = get_cart();
+        if (!empty($cart)) {
+            $checkout['u_id'] = $_SESSION["u_id"];
+            $checkout["total"] = get_total();
+            $checkout["drinks"] = json_encode($cart, true);
+            $checkout = checkout($checkout);
+            if (!$checkout) {
+                $response = [
+                    'type' => 'error',
+                    'message' => 'Checkout Failed!'
+                ];
+            } else {
+                $response = [
+                    'type' => 'success',
+                    'message' => 'Checkout Successful',
+                ];
+                empty_cart();
+            }
+        } else {
+            header('Location: ./index.php');
+        }
+    }
+
+    ?>
+
     <section class="checkout" name="checkout">
         <form>
+            <?php if (isset($response)) { ?>
+                <div class="message-box <?= $response['type'] ?>">
+                    <p><?= $response['message'] ?></p>
+                </div>
+            <?php } ?>
             <p>Personal Information: </p>
             <div class="checkout-form personal-details">
                 <input type="text" placeholder="Name" required>

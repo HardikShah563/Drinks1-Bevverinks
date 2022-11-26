@@ -249,6 +249,12 @@ function get_total()
     return $total;
 }
 
+function how_many_in_cart()
+{
+    $cart = get_cart();
+    return count($cart);
+}
+
 function checkout($data)
 {
     global $db;

@@ -43,7 +43,7 @@
                 <button class="nav-btn">
                     <a class="fa-solid fa-cart-shopping icon" href="sql-pages/cart.php"></a>
                     <p class="nav-action-label"><a href="sql-pages/cart.php">Cart</a></p>
-                    <div class="btn-badge green" aria-hidden="true">3</div>
+                    <div class="btn-badge green" aria-hidden="true"><?= how_many_in_cart() ?></div>
                 </button>
             </div>
             <div class="nav-lines">
