@@ -16,6 +16,10 @@
                 <a class="fa-solid fa-right-from-bracket icon" href="logout.php" ></a>
                 <p class="nav-action-label"><a href="logout.php">LogOut</a></p>
             </button>
+            <button class="nav-btn">
+                <a class="fa-solid fa-user icon" href="account.php" ></a>
+                <p class="nav-action-label"><a href="account.php">Acc</a></p>
+            </button>
         <?php } else { ?>
             <button class="nav-btn">
                 <a class="fa-solid fa-user icon" href="login.php" ></a>

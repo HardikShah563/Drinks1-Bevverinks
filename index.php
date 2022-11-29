@@ -34,6 +34,10 @@
                         <a class="fa-solid fa-right-from-bracket icon" href="sql-pages/logout.php" ></a>
                         <p class="nav-action-label"><a href="sql-pages/logout.php">LogOut</a></p>
                     </button>
+                    <button class="nav-btn">
+                        <a class="fa-solid fa-user icon" href="./sql-pages/account.php" ></a>
+                        <p class="nav-action-label"><a href="./sql-pages/account.php">Acc</a></p>
+                    </button>
                 <?php } else { ?>
                     <button class="nav-btn">
                         <a class="fa-solid fa-user icon" href="sql-pages/login.php" ></a>
