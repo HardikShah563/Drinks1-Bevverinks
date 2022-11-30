@@ -15,10 +15,10 @@ session_start();
 function signup($data)
 {
     global $db;
-    $password = md5($data["password"]);
-    $sql = "insert into users(fname, lname, email, password, type) values(?,?,?,?,?)";
+    $passkey = md5($data["passkey"]);
+    $sql = "insert into users(fname, lname, email, passkey, type) values(?,?,?,?,?)";
     $stmt = $db->prepare($sql);
-    $stmt->bind_param("sssss", $data["fname"], $data["lname"], $data["email"], $password, $data["type"]);
+    $stmt->bind_param("sssss", $data["fname"], $data["lname"], $data["email"], $passkey, $data["type"]);
     if ($stmt->execute()) {
         return 1;
     }
@@ -49,7 +49,7 @@ function login($data)
     $result = $stmt->get_result();
     if (mysqli_num_rows($result)) {
         while ($row = $result->fetch_assoc()) {
-            if ($row["password"] == md5($data["password"])) {
+            if ($row["passkey"] == md5($data["passkey"])) {
                 $_SESSION["u_id"] = $row["u_id"];
                 $_SESSION["fname"] = $row["fname"];
                 $_SESSION["lname"] = $row["lname"];
@@ -144,10 +144,10 @@ function get_user($id)
 function edit_user($data)
 {
     global $db;
-    $password = md5($data['password']);
-    $sql = "update users set fname = ?, lname = ?, email = ?, password = ? where u_id = ?";
+    $passkey = md5($data['passkey']);
+    $sql = "UPDATE users SET fname = ?, lname = ?, email = ?, passkey = ? WHERE u_id = ?";
     $stmt = $db->prepare($sql);
-    $stmt->bind_param('sssss', $data['fname'], $data['lname'], $data['email'], $password, $data['u_id']);
+    $stmt->bind_param('sssss', $data['fname'], $data['lname'], $data['email'], $passkey, $_SESSION['u_id']);
     if ($stmt->execute()) {
         return 1;
     }

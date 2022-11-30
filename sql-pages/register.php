@@ -11,7 +11,7 @@ if (isset($_POST['signup'])) {
       'message' => 'Email is Already Taken!',
     ];
   } else {
-    if ($data["password"] == $data["cpassword"]) {
+    if ($data["passkey"] == $data["cpassword"]) {
       $data["type"] = 'user';
       $user = signup($data);
       if ($user) {
@@ -59,7 +59,7 @@ if (isset($_POST['signup'])) {
                     <input type="text" name="fname" id="fname" placeholder="First Name" required>
                     <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                     <input type="email" name="email" id="email" placeholder="Email Id" required>
-                    <input type="password" name="password" id="password" placeholder="Create password" required>
+                    <input type="password" name="passkey" id="password" placeholder="Create password" required>
                     <input type="password" name="cpassword" id="password" placeholder="Retype password" required>
                     <button class="submit" id="submit-button" name="signup" type="submit">Create Account</button>
                 </form>

@@ -13,11 +13,11 @@
 
         if (isset($_POST['edit'])) {
             $editDetails = $_POST;
-
+                $editDetails['u_id'] = $_SESSION["u_id"];
                 $editDetails['fname'] = $_POST["fname"];
                 $editDetails['lname'] = $_POST["lname"];
                 $editDetails['email'] = $_POST["email"];
-                $editDetails['password'] = $_POST["newpassword"];
+                $editDetails['passkey'] = $_POST["newpasskey"];
                 $edit = edit_user($editDetails);
                 
                 if(!$edit) {
@@ -36,23 +36,25 @@
         ?>
         
         <div class="main-text">
-            <h1>Edit Details</h1>
+            <h1 style="text-align: center;">Edit Details</h1>
         </div>
 
         <section class="checkout">
-            <h1>Edit Details</h1>
-            <?php if (isset($response)) { ?>
-                <div class="message-box <?= $response['type'] ?>">
-                    <p style="color: #fff; font-size: 16px;"><?= $response['message'] ?></p>
-                </div>
-            <?php } ?>
+            
+            
             <form action="?" method="post" class="checkout-form">
+                <?php if (isset($response)) { ?>
+                    <div class="message-box <?= $response['type'] ?>">
+                        <p style="color: #fff; font-size: 16px;"><?= $response['message'] ?></p>
+                    </div>
+                <?php } ?>
+
             <p>Note: If you do not wish to update any particular field, type the original ones</p>
                 <input type="text" name="fname" placeholder="First Name">
                 <input type="text" name="lname" placeholder="Last Name">
                 <input type="email" name="email" placeholder="Email Address">
-                <input type="password" name="password" placeholder="Old password">
-                <input type="password" name="newpassword" placeholder="New password">
+                <input type="password" name="passkey" placeholder="Old password">
+                <input type="password" name="newpasskey" placeholder="New password">
                 <button type="submit" name="edit" style="display: flex; justify-content: center; align-items: center; font-size: 18px; width: 200px; height: 40px; margin: 20px auto;">Edit Details &nbsp;<i class="fa-solid fa-pen-to-square"></i></button>
             </form>
         </section>
